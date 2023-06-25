@@ -54,7 +54,8 @@ Extract keywords
 
     >>> from flashtext import KeywordProcessor
     >>> keyword_processor = KeywordProcessor()
-    >>> keyword_processor.add_keyword('星星', '点灯')
+    >>> keyword_processor.add_keyword('星星')
+    >>> keyword_processor.add_keyword('点灯')
     >>> keywords_found = keyword_processor.extract_keywords('星星点灯')
     >>> keywords_found
     >>> # ['星星']  # 原版
