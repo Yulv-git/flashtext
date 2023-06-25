@@ -52,6 +52,14 @@ Extract keywords
     >>> keywords_found
     >>> # ['New York', 'Bay Area']
 
+    >>> from flashtext import KeywordProcessor
+    >>> keyword_processor = KeywordProcessor()
+    >>> keyword_processor.add_keyword('星星', '点灯')
+    >>> keywords_found = keyword_processor.extract_keywords('星星点灯')
+    >>> keywords_found
+    >>> # ['星星']  # 原版
+    >>> # ['星星', '点灯']  # 中文改进
+
 Replace keywords
     >>> keyword_processor.add_keyword('New Delhi', 'NCR region')
     >>> new_sentence = keyword_processor.replace_keywords('I love Big Apple and new delhi.')
